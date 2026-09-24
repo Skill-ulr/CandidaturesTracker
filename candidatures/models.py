@@ -21,6 +21,7 @@ class Candidature(models.Model):
     poste = models.CharField(max_length=150)
     type_contrat = models.CharField(max_length=20, choices=TYPE_CONTRAT, default='non_precise')
     lien_annonce = models.URLField(blank=True, null=True)
+    site_web = models.URLField(blank=True, null=True)
     date_envoie = models.DateField()
     statut = models.CharField(max_length=20, choices=STATUT_CHOICES, default='envoyee')
     note = models.TextField(blank=True, null=True)
